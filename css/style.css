@@ -242,34 +242,42 @@ button {  width: auto; overflow: visible; }
         
 
 
-html, body { height: 100%;}
+html, body { min-height: 100%;}
 body { 
   background: hsl(777, 70%, 50%); 
   /* Thanks Lea Verou: leaverou.me/demos/css3-patterns.html */
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(hsla(300, 0%, 0%, 1))),
+  background-image: -webkit-gradient(linear, 0 50%, 0 100%, from(transparent), to(hsla(300, 0%, 0%, 0.8))),
               -webkit-gradient(linear, 0 100%, 100% 0,                             
-              color-stop(.25, hsla(300, 0%, 100%, 0.2)), color-stop(.25, transparent),
-              color-stop(0.5, transparent), color-stop(0.5, hsla(300, 0%, 100%, 0.2)),
-              color-stop(.75, hsla(300, 0%, 100%, 0.2)), color-stop(.75, transparent),
+              color-stop(.25, hsla(300, 0%, 100%, 0.08)), color-stop(.25, transparent),
+              color-stop(0.5, transparent), color-stop(0.5, hsla(300, 0%, 100%, 0.08)),
+              color-stop(.75, hsla(300, 0%, 100%, 0.08)), color-stop(.75, transparent),
               to(transparent)), 
               -webkit-gradient(linear, 0 0, 100% 100%,                             
-              color-stop(.25, hsla(300, 0%, 100%, 0.2)), color-stop(.25, transparent),
-              color-stop(0.5, transparent), color-stop(0.5, hsla(300, 0%, 100%, 0.2)),
-              color-stop(.75, hsla(300, 0%, 100%, 0.2)), color-stop(.75, transparent),
-   						to(transparent));
-  background-image: -moz-linear-gradient(transparent, hsla(300, 0%, 0%, 1)), 
-            -moz-linear-gradient(45deg, hsla(300, 0%, 0%, 0.2) 25%, transparent 25%,
-  					transparent 50%, hsla(300, 0%, 0%, 0.2) 50%, hsla(300, 0%, 0%, 0.2) 75%,
+              color-stop(.25, hsla(300, 0%, 100%, 0.08)), color-stop(.25, transparent),
+              color-stop(0.5, transparent), color-stop(0.5, hsla(300, 0%, 100%, 0.08)),
+              color-stop(.75, hsla(300, 0%, 100%, 0.08)), color-stop(.75, transparent),
+   						to(transparent));   
+  background-image: -moz-linear-gradient(transparent, hsla(300, 0%, 0%, 0.8)), 
+            -moz-linear-gradient(45deg, hsla(300, 0%, 0%, 0.08) 25%, transparent 25%,
+  					transparent 50%, hsla(300, 0%, 0%, 0.08) 50%, hsla(300, 0%, 0%, 0.08) 75%,
   					transparent 75%, transparent),
-  					-moz-linear-gradient(-45deg, hsla(300, 0%, 0%, 0.2) 25%, transparent 25%,
-            					transparent 50%, hsla(300, 0%, 0%, 0.2) 50%, hsla(300, 0%, 0%, 0.2) 75%,
+  					-moz-linear-gradient(-45deg, hsla(300, 0%, 0%, 0.08) 25%, transparent 25%,
+            					transparent 50%, hsla(300, 0%, 0%, 0.08) 50%, hsla(300, 0%, 0%, 0.08) 75%,
             					transparent 75%, transparent);
-  background-image: -o-linear-box-gradient(45deg, hsla(300, 0%, 0%, 1) 25%, transparent 25%,
-  					transparent 50%, hsla(300, 0%, 0%, 1) 50%, hsla(300, 0%, 0%, 1) 75%,
-  					transparent 75%, transparent);
-  background-image: linear-box-gradient(45deg, hsla(300, 0%, 0%, 1) 25%, transparent 25%,
-  					transparent 50%, hsla(300, 0%, 0%, 1) 50%, hsla(300, 0%, 0%, 1) 75%,
-  					transparent 75%, transparent); 			
+  background-image: -o-linear-gradient(transparent, hsla(300, 0%, 0%, 0.8)), 
+            -o-linear-gradient(45deg, hsla(300, 0%, 0%, 0.08) 25%, transparent 25%,
+  					transparent 50%, hsla(300, 0%, 0%, 0.08) 50%, hsla(300, 0%, 0%, 0.08) 75%,
+  					transparent 75%, transparent),
+  					-o-linear-gradient(-45deg, hsla(300, 0%, 0%, 0.08) 25%, transparent 25%,
+            					transparent 50%, hsla(300, 0%, 0%, 0.08) 50%, hsla(300, 0%, 0%, 0.08) 75%,
+            					transparent 75%, transparent);  
+  background-image: linear-gradient(transparent, hsla(300, 0%, 0%, 0.8)), 
+            linear-gradient(45deg, hsla(300, 0%, 0%, 0.08) 25%, transparent 25%,
+  					transparent 50%, hsla(300, 0%, 0%, 0.08) 50%, hsla(300, 0%, 0%, 0.08) 75%,
+  					transparent 75%, transparent),
+  					linear-gradient(-45deg, hsla(300, 0%, 0%, 0.08) 25%, transparent 25%,
+            					transparent 50%, hsla(300, 0%, 0%, 0.08) 50%, hsla(300, 0%, 0%, 0.08) 75%,
+            					transparent 75%, transparent);  
 }
 #main { margin: 0 auto; width: 900px; height: 70%; position: relative;}
 
