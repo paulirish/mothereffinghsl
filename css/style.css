@@ -75,7 +75,7 @@ code { background: hsla(0,0%,90%,0.2); font-size: 15px; padding: 0 2px;}
 
 
 .fd-slider { width: 250px!important;}
-.fd-slider-bar { width: 100%; }
+.fd-slider-bar { width: auto; }
 
 
 /*
