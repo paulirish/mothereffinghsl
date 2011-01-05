@@ -245,7 +245,7 @@ button {  width: auto; overflow: visible; }
 html, body { min-height: 100%;}
 html { 
   background: hsl(68, 1%, 28%); 
-  /* Thanks Lea Verou: leaverou.me/demos/css3-patterns.html */
+  /* Thanks Lea Verou: leaverou.me/demos/css3-patterns.html and Divya Manian for the implementation. */
   background-image: -webkit-gradient(linear, 0 50%, 0 100%, from(transparent), to(hsla(300, 0%, 0%, 0.8))),
               -webkit-gradient(linear, 0 100%, 100% 0,                             
               color-stop(.25, hsla(300, 0%, 100%, 0.08)), color-stop(.25, transparent),
