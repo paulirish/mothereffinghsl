@@ -243,8 +243,8 @@ button {  width: auto; overflow: visible; }
 
 
 html, body { min-height: 100%;}
-body { 
-  background: hsl(777, 70%, 50%); 
+html { 
+  background: hsl(68, 1%, 28%); 
   /* Thanks Lea Verou: leaverou.me/demos/css3-patterns.html */
   background-image: -webkit-gradient(linear, 0 50%, 0 100%, from(transparent), to(hsla(300, 0%, 0%, 0.8))),
               -webkit-gradient(linear, 0 100%, 100% 0,                             
@@ -279,6 +279,9 @@ body {
             					transparent 50%, hsla(300, 0%, 0%, 0.08) 50%, hsla(300, 0%, 0%, 0.08) 75%,
             					transparent 75%, transparent);  
 }
+
+body { margin: 5em; border-radius: 10px; padding: 10px; } 
+
 #main { margin: 0 auto; width: 900px; height: 70%; position: relative;}
 
 h1 { font: 60px/68px 'ChunkFiveRegular', Arial, sans-serif; margin: 1em auto; text-align: center; }
@@ -288,7 +291,7 @@ fieldset { margin: 0 auto; width: 325px; margin-bottom: 2em;  }
 fieldset label { display: block; }
 label span { display: inline-block; width: 10em; text-align: right; margin-right: 1em; }
 label:active span { font-weight: bold; }
-footer { text-align: center; margin: 8em 0 4em; }
+footer { text-align: center; margin: 1em 0 4em; }
 
 
 /*
