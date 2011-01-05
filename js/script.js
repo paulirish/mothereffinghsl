@@ -20,7 +20,7 @@ var canvas  = document.querySelector('canvas'),
     y       = 0,
     color   = undefined,
     alpha   = undefined,
-    realW   = parseInt(getComputedStyle( canvas ).width, 10),
+    realW   = parseInt(getComputedStyle( canvas, null).width, 10),
     ratio   = width / realW,
     cache   = [],
     
@@ -52,9 +52,11 @@ for (x = 0; x < width; x++){
 
 
 function grabColor(e){
-  var realX = parseInt(e.offsetX * ratio, 10) % 360,
-      realY = parseInt(e.offsetY * ratio, 10) % 360
-   
+  var x     = e.offsetX || e.layerX,
+      y     = e.offsetY || e.layerY,
+      realX = parseInt(x * ratio, 10) % 360,
+      realY = parseInt(y * ratio, 10) % 360
+
   color = cache[realX][realY];
 }
 

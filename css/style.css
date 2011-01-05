@@ -286,7 +286,7 @@ body { margin: 5em; border-radius: 10px; padding: 10px; font-family: 'PT Sans', 
 
 h1 { font: 60px/68px Sniglet, 'ChunkFiveRegular', Arial, sans-serif; margin: 20px auto; text-align: center; }
 h1 span { display: block; color: white; }
-canvas { width: 100%; margin-bottom: .4em;  } 
+canvas { width: 100%; margin-bottom: .4em;  position:relative;} 
 #loading { width: 100%; display:block; position:relative; top: -150px; text-align: center; z-index: -1;}    
 label + fieldset { margin-top: -10px;}             
 fieldset { margin: 0 auto; width: 325px; margin-bottom: 1em;  }
@@ -294,7 +294,9 @@ fieldset label { display: block; }
 label span { display: inline-block; width: 10em; text-align: right; margin-right: 1em; }
 label:active span { font-weight: bold; }
 footer { text-align: center; margin: 1em 0 4em; }
-label#sat { position: absolute; /* to not muck with flow */ -webkit-transform:rotate(90deg) translate(-175px,60px); letter-spacing: 10px;}
+label#sat { position: absolute; /* to not muck with flow */  letter-spacing: 10px;
+  -webkit-transform:rotate(90deg) translate(-175px,60px); -moz-transform:rotate(90deg) translate(-175px,60px); -o-transform:rotate(90deg) translate(-175px,60px); transform:rotate(90deg) translate(-175px,60px);
+}
 p { font-size: 16px; border: 1px solid hsl(0,0%,30%); padding: 7px;}
 code { background: hsla(0,0%,90%,0.2); font-size: 15px; padding: 0 2px;}
 /*
