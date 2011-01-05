@@ -43,6 +43,23 @@
   </footer>
 
   <script src="js/script.js"></script>
+  
+  <script src="http://github.com/SlexAxton/yepnope.js/raw/master/yepnope.js"></script>
+  <script>
+
+  yepnope({
+    test: Modernizr.inputtypes.range,
+    nope: [      
+          'js/mylibs/fd-slider.js'
+     ,'css!js/mylibs/fd-slider.css'      
+    ],
+    callback: function(url, testResult) {
+        // the fd-slider actually runs automatically
+    }
+  });
+
+  </script>
+  
 
   <script>
    var _gaq = [['_setAccount', 'UA-18857974-2'], ['_trackPageview']];

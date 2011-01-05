@@ -299,6 +299,12 @@ label#sat { position: absolute; /* to not muck with flow */  letter-spacing: 10p
 }
 p { font-size: 16px; border: 1px solid hsl(0,0%,30%); padding: 7px;}
 code { background: hsla(0,0%,90%,0.2); font-size: 15px; padding: 0 2px;}
+
+
+.fd-slider { width: 250px!important;}
+.fd-slider-bar { width: 100%; }
+
+
 /*
  * media queries for responsive design
  * these follow after primary styles so they will successfully override.

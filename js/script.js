@@ -75,6 +75,25 @@ function setText(){
 }
 
 
+function inputchange(e){
+    
+  var target = e.target;
+  
+  if (target.id == 'alpha'){
+    alpha = Math.floor(target.value)/100;
+    if (alpha === 1){
+      alpha = undefined;
+    }
+  }
+  if (target.id == 'light'){
+    var split = color.split('%');
+    split[1] = split[1].replace(/\d+/, Math.round(target.value));
+    color = split.join('%');
+
+  }
+  setText();
+}
+
 
 canvas.addEventListener('mousemove', mousemove, false);
 
@@ -87,24 +106,7 @@ canvas.addEventListener('click', function(e){
 
 
 [].forEach.call( document.querySelectorAll('input[type=range]'), function(elem, i){
-  elem.addEventListener('change', function(e){
-    
-    var target = e.target;
-    
-    if (target.id == 'alpha'){
-      alpha = Math.floor(target.value)/100;
-      if (alpha === 1){
-        alpha = undefined;
-      }
-    }
-    if (target.id == 'light'){
-      var split = color.split('%');
-      split[1] = split[1].replace(/\d+/, Math.round(target.value));
-      color = split.join('%');
-
-    }
-    setText();
-  }, false);
+  elem.addEventListener('change', inputchange, false);
 });
 
 
