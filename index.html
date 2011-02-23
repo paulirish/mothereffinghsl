@@ -64,11 +64,12 @@
     Made by <abbr title="view source for more info, b.">Paul</abbr>. ♡
   </footer>
 
+  <!-- scripts concatenated and minified via ant build script-->
   <script src="js/script.js"></script>
-  <script src="js/mylibs/yepnope.js"></script>
+  <!-- end scripts-->
   <script>
 
-  yepnope({
+  Modernizr.load({
     test: Modernizr.inputtypes.range,
     nope: [      
           'js/mylibs/fd-slider.js'
