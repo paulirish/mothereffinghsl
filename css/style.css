@@ -84,14 +84,19 @@ html {
 }
 */
 
-body { margin: 3em; border-radius: 10px; padding: 10px; font-family: 'PT Sans', 'Corben', sans-serif; font-weight: bold;} 
+body { margin: 1em 0 0; border-radius: 10px; padding: 10px; font-family: 'PT Sans', 'Corben', sans-serif; font-weight: bold;} 
 
 #main { margin: 0 auto; width: 900px; height: 70%; position: relative;}
 
-h1 { font: 60px/68px Sniglet, 'ChunkFiveRegular', Arial, sans-serif; margin: 20px auto; text-align: center; }
+h1 { font: 60px/68px Sniglet, 'ChunkFiveRegular', Arial, sans-serif; margin: 0 auto; text-align: center; }
 h1 span { display: block; color: white; }
-canvas { width: 100%; height: 250px; /* interestinly, opera doesnt scale up the Canvas if you only change one of the dimensions */ 
-         margin-bottom: .4em;  position:relative; cursor: crosshair;} 
+canvas { width: 100%; height: 250px; /* interestinly, opera doesnt scale up the Canvas if you only change one of the dimensions */
+	border: 4px solid rgba(255,255,255,.6); margin-bottom: .4em; position:relative; cursor: crosshair;
+	border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; -o-border-radius: 3px;
+	box-shadow: 0 1px 10px hsla(200, 5%, 10%, .5); 
+	-moz-box-shadow: 0 1px 10px hsla(200, 5%, 10%, .5);
+	-webkit-box-shadow: 0 1px 10px hsla(200, 5%, 10%, .5);
+}
 #loading { width: 100%; display:block; position:relative; top: -150px; text-align: center; z-index: -1;}    
 label + fieldset { margin-top: -10px;}             
 fieldset { margin: 0 auto; width: 325px; margin-bottom: 1em;  }
