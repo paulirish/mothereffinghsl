@@ -3,7 +3,6 @@
 */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}body{font:13px/1.231 sans-serif;*font-size:small}select,input,textarea,button{font:99% sans-serif}pre,code,kbd,samp{font-family:monospace,sans-serif}h1,h2,h3,h4,h5,h6{font-weight:bold}html{overflow-y:scroll}a:hover,a:active{outline:none}a,a:active,a:visited{color:#607890}a:hover{color:#036}ul,ol{margin-left:2em}ol{list-style-type:decimal}nav ul,nav li{margin:0}small{font-size:85%}strong,th{font-weight:bold}td,td img{vertical-align:top}sub,sup{font-size:75%;line-height:0;position:relative}sup{top:-0.5em}sub{bottom:-0.25em}pre{padding:15px;white-space:pre;white-space:pre-wrap;white-space:pre-line;word-wrap:break-word}textarea{overflow:auto}.ie6 legend,.ie7 legend{margin-left:-7px}input[type="radio"]{vertical-align:text-bottom}input[type="checkbox"]{vertical-align:bottom}.ie7 input[type="checkbox"]{vertical-align:baseline}.ie6 input{vertical-align:text-bottom}label,input[type="button"],input[type="submit"],input[type="image"],button{cursor:pointer}button,input,select,textarea{margin:0}input:invalid,textarea:invalid{border-radius:1px;-moz-box-shadow:0 0 5px red;-webkit-box-shadow:0 0 5px red;box-shadow:0 0 5px red}.no-boxshadow input:invalid,.no-boxshadow textarea:invalid{background-color:#f0dddd}::-moz-selection{background:#ff5e99;color:#fff;text-shadow:none}::selection{background:#ff5e99;color:#fff;text-shadow:none}a:link{-webkit-tap-highlight-color:#ff5e99}button{width:auto;overflow:visible}.ie7 img{-ms-interpolation-mode:bicubic}.ir{display:block;text-indent:-999em;overflow:hidden;background-repeat:no-repeat;text-align:left;direction:ltr}.hidden{display:none;visibility:hidden}.visuallyHidden{border:0!important;clip:rect(0 0 0 0);height:1px!important;margin:-1px!important;overflow:hidden!important;padding:0!important;position:absolute!important;width:1px!important}.invisible{visibility:hidden}.clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;visibility:hidden}.clearfix:after{clear:both}.clearfix{zoom:1}
 
-
 body,select,input,textarea{color:hsl(188,73%,90%);text-shadow:1px 1px 1px hsl(300,0%,0%);font:14px/24px helvetica,arial,sans-serif}
 a, a:visited {color:hsl(188,73%,85%); }
 a:hover { color:hsl(188,73%,75%);}
@@ -11,13 +10,45 @@ a:hover { color:hsl(188,73%,75%);}
  /* Primary Styles
     Author: Paul Irish and some hookups from Divya Manian
  */
+/* Thanks Lea Verou: leaverou.me/demos/css3-patterns.html and Divya Manian for the implementation. */
 
-
-
-html, body { min-height: 100%;}
+html, body { min-height: 100%; }
+/* Blue checkerboard bg from Jared */
+html {
+    background: hsl(200, 100%, 28%);
+    background-image:
+        -webkit-gradient(linear, 0 50%, 0 100%,
+            from(transparent),
+            to(hsla(200, 100%, 0%, 0.8))),
+        -webkit-gradient(linear, 0 100%, 100% 0,
+            color-stop(.25, hsla(200, 100%, 100%, 0.08)),
+            color-stop(.25, transparent),
+            color-stop(0.5, transparent),
+            color-stop(0.5, hsla(200, 100%, 100%, 0.08)),
+            color-stop(.75, hsla(200, 100%, 100%, 0.08)),
+            color-stop(.75, transparent), to(transparent)),
+        -webkit-gradient(linear, 0 0, 100% 100%,
+            color-stop(.25, hsla(200, 100%, 100%, 0.08)),
+            color-stop(.25, transparent),
+            color-stop(0.5, transparent),
+            color-stop(0.5, hsla(200, 100%, 100%, 0.08)),
+            color-stop(.75, hsla(200, 100%, 100%, 0.08)),
+            color-stop(.75, transparent), to(transparent));
+    background-image:
+        -moz-linear-gradient(transparent, hsla(200, 100%, 100%, 0.8)), 
+		-moz-linear-gradient(45deg, hsla(200, 100%, 0%, 0.08) 25%, transparent 25%, transparent 50%, hsla(200, 100%, 0%, 0.08) 50%, hsla(200, 100%, 0%, 0.08) 75%, transparent 75%, transparent),
+        -moz-linear-gradient(-45deg, hsla(200, 100%, 0%, 0.08) 25%, transparent 25%, transparent 50%, hsla(200, 100%, 0%, 0.08) 50%, hsla(200, 100%, 0%, 0.08) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(transparent, hsla(200, 100%, 0%, 0.8)),
+        -o-linear-gradient(45deg, hsla(200, 100%, 0%, 0.08) 25%, transparent 25%, transparent 50%, hsla(200, 100%, 0%, 0.08) 50%, hsla(200, 100%, 0%, 0.08) 75%, transparent 75%, transparent),
+        -o-linear-gradient(-45deg, hsla(200, 100%, 0%, 0.08) 25%, transparent 25%, transparent 50%, hsla(200, 100%, 0%, 0.08) 50%, hsla(200, 100%, 0%, 0.08) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(transparent, hsla(200, 100%, 0%, 0.8)),
+        linear-gradient(45deg, hsla(200, 100%, 0%, 0.08) 25%, transparent 25%, transparent 50%, hsla(200, 100%, 0%, 0.08) 50%, hsla(200, 100%, 0%, 0.08) 75%, transparent 75%, transparent),
+        linear-gradient(-45deg, hsla(200, 100%, 0%, 0.08) 25%, transparent 25%, transparent 50%, hsla(200, 100%, 0%, 0.08) 50%, hsla(200, 100%, 0%, 0.08) 75%, transparent 75%, transparent)
+}
+/*
 html { 
   background: hsl(68, 1%, 28%); 
-  /* Thanks Lea Verou: leaverou.me/demos/css3-patterns.html and Divya Manian for the implementation. */
+
   background-image: -webkit-gradient(linear, 0 50%, 0 100%, from(transparent), to(hsla(300, 0%, 0%, 0.8))),
               -webkit-gradient(linear, 0 100%, 100% 0,                             
               color-stop(.25, hsla(300, 0%, 100%, 0.08)), color-stop(.25, transparent),
@@ -51,8 +82,9 @@ html {
                       transparent 50%, hsla(300, 0%, 0%, 0.08) 50%, hsla(300, 0%, 0%, 0.08) 75%,
                       transparent 75%, transparent);  
 }
+*/
 
-body { margin: 5em; border-radius: 10px; padding: 10px; font-family: 'PT Sans', 'Corben', sans-serif; font-weight: bold;} 
+body { margin: 3em; border-radius: 10px; padding: 10px; font-family: 'PT Sans', 'Corben', sans-serif; font-weight: bold;} 
 
 #main { margin: 0 auto; width: 900px; height: 70%; position: relative;}
 
