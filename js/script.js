@@ -47,8 +47,8 @@ for (x = 0; x < width; x++){
 
 
 function grabColor(e){
-    var x = e.offsetX || e.layerX,
-        y = e.offsetY || e.layerY,
+    var x = (e.offsetX || e.layerX),// - parseInt(getComputedStyle(e.target, null).borderLeftWidth),
+        y = (e.offsetY || e.layerY),// - parseInt(getComputedStyle(e.target, null).borderTopWidth),
         realX = parseInt(x * ratio, 10) % 360,
         realY = parseInt(y * ratio, 10) % 360;
 
