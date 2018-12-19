@@ -73,7 +73,7 @@ fieldset label { display: block; }
 label span { display: inline-block; width: 10em; text-align: right; margin-right: 1em; }
 label:active span { font-weight: bold; }
 footer { text-align: center; margin: 10px 0; }
-label#sat { position: absolute; /* to not muck with flow */  letter-spacing: 10px;
+label#sat { position: absolute; /* to not muck with flow */  letter-spacing: 10px; pointer-events: none;
   -webkit-transform:rotate(90deg) translate(-175px,60px); -moz-transform:rotate(90deg) translate(-175px,60px); -o-transform:rotate(90deg) translate(-175px,60px); transform:rotate(90deg) translate(-175px,60px);
 }
 p { font-size: 16px; border: 1px solid hsl(0,0%,30%); padding: 7px;}
